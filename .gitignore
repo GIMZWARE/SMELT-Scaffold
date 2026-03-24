@@ -25,5 +25,8 @@ htmlcov/
 # Rust
 rust/router/target/
 
+# OS
+.DS_Store
+
 # Docker
 docker/data/
