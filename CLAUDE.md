@@ -42,7 +42,7 @@ smelt-scaffold/
 |---|---|---|
 | `src/smelt/schemas/` | **FULL** — exact production types | Same |
 | `src/smelt/orchestrator/` | Stub docstring only | Full orchestrator, NATS client, config |
-| `src/smelt/agents/` | Stub docstring only | BaseAgent + 3 concrete agents |
+| `src/smelt/agents/` | Stub docstring only | BaseAgent + 5 concrete agents |
 | `src/smelt/memory/` | Stub docstring only | Redis, Postgres, pgvector implementations |
 | `src/smelt/observability/` | Stub docstring only | OTel setup + structlog |
 | `src/smelt/gateway/` | Stub docstring only | FastAPI app + lifespan + middleware |

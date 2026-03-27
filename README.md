@@ -4,92 +4,86 @@ Public open-core scaffold for SMELT, a production multi-agent AI boilerplate by 
 
 ## What This Repository Is
 
-`smelt-scaffold` is the public marketing/education repository. It provides:
+`smelt-scaffold` is the public reference repository. It provides:
 
 - Project structure and architecture boundaries
 - Docker local infrastructure bootstrap (`NATS` + `Redis`)
-- Typed schema and orchestrator stub layout
+- Full typed schema contracts (identical to the paid implementation)
 - Decision-driven documentation for extension and adaptation
 
-It intentionally **does not** include the full working agent implementations, full Rust router, or private member-only assets.
+It intentionally **does not** include the full working agent implementations, Rust router, or paid-tier assets.
 
-## Product Positioning
+## Who This Is For
 
-SMELT is designed for senior Python and AI engineers who want a principled starting point for production multi-agent systems without framework lock-in.
+Senior Python and AI engineers who want a principled starting point for production multi-agent systems without framework lock-in.
 
 - Tagline: **Smelt your agents into production**
 - Philosophy: explicit contracts, explicit state, explicit observability
 - Anti-goal: hidden orchestration magic and runtime abstractions
 
-## Public vs Private Scope
+## Public vs Paid Scope
 
 ### Included Here (Public)
 
 - Scaffolded Python package layout
-- Stubbed contracts (`WorkItem`, `WorkResult`, task state models)
+- Full production contracts (`WorkItem`, `WorkResult`, `TaskState`, typed payloads)
 - Stubbed agent/orchestrator/memory module boundaries
-- Basic local stack bootstrap via Docker Compose
+- Local stack bootstrap via Docker Compose
 - Architecture notes and design rationale
 
-### Not Included Here
+### Available with Purchase
 
-- Working `ResearchAgent`, `ReasoningAgent`, `ActionAgent`
-- Full asyncio orchestrator with production task state transitions
-- Full Rust router implementation and gRPC bridge
-- End-to-end production pipeline with real LLM calls
-- Member templates, deployment packs, and premium docs
+- Five working agents (Planner, Research, Reasoning, Action, Validator)
+- Full asyncio orchestrator with intelligent routing and scatter-gather
+- Rust NATS router with gRPC bridge
+- End-to-end pipeline with real LLM calls
+- Five domain templates (Customer Support, Content Moderation, Market Research, Data Pipeline, Code Review)
+- Studio trace visualiser
+- Smelter wizard for custom builds
+- CLI scaffolding tools (`create-smelt` npm + `smelt-cli` PyPI)
+- Guardrails middleware and policy-as-code
+- MCP and A2A protocol support
 
-## Reference Architecture (v1 Intent)
+## Reference Architecture
 
-SMELT’s production architecture (implemented in private repo) is layered as:
+SMELT's production architecture (implemented in the private repo) is layered as:
 
 1. FastAPI ingress (validation + trace stamping)
-2. NATS JetStream event bus
+2. NATS JetStream event bus (durable at-least-once delivery)
 3. Python asyncio orchestrator with Pydantic task state machine
-4. Worker agents (research, reasoning, action)
+4. Five specialised worker agents
 5. Memory split by concern:
-   - Redis: working memory
+   - Redis: working memory + shared scratchpad
    - Postgres: episodic/audit history
    - pgvector: semantic retrieval
-6. Rust router for hot-path routing, exposed to Python via gRPC
-7. OpenTelemetry + structured logging observability
+6. Rust router for hot-path fan-out, exposed to Python via gRPC
+7. OpenTelemetry + structlog observability
 
 ## Quickstart
 
 ```bash
+pip install -e ".[dev]"
 docker compose up
 ```
 
-This starts the local dependencies expected by the scaffold. Extend the stubs to build your own implementation, or use the private SMELT repo for the complete working version.
+This starts the local dependencies expected by the scaffold. Extend the stubs to build your own implementation, or purchase the full working version.
 
 ## Design Principles
 
-- **No framework lock-in:** no LangGraph-style orchestration dependency
-- **Strict contracts:** boundary models validated with strict Pydantic schemas
+- **No framework lock-in:** no LangGraph, no CrewAI, no orchestration dependency
+- **Strict contracts:** boundary models validated with Pydantic `strict=True`
 - **Operational clarity:** decisions are documented so teams can replace components with intent
 - **Separation of concerns:** ingress, orchestration, agent execution, memory, and routing are split cleanly
-
-## Roadmap Snapshot
-
-- **v1 (Boilerplate):** scaffold + docs + local stack + baseline contracts
-- **v2 (Living Kit):** advanced templates, Temporal workflows, K8s manifests, member support
-- **v3 (Smelter):** guided scaffolding tool for custom repo generation
+- **Debuggability over magic:** explicit state, explicit routing, explicit observability
 
 ## Get the Full Version
 
-This is the public scaffold. The full working implementation includes:
-- 5 domain templates (Customer Support, Content Moderation, Market Research, Data Pipeline, Code Review)
-- Studio trace visualiser
-- Smelter wizard access
-- CLI scaffolding tools
+This is the public scaffold. The full working implementation includes everything listed above plus ongoing updates and support.
 
 **Get started at [smelt.gimzware.ai](https://smelt.gimzware.ai)**
 
 ## Licensing
 
-This repository is distributed under SMELT’s open-core licensing model.
-
-- Public scaffold: source-available under a proprietary view-focused license
-- Working implementation: distributed through paid tiers (Starter/Member/Enterprise)
+This repository is distributed under a proprietary view-only licence. The source is provided for inspection and evaluation only. The working implementation is available through paid tiers (Starter / Member).
 
 See `LICENCE` for exact terms.
