@@ -75,6 +75,16 @@ This starts the local dependencies expected by the scaffold. Extend the stubs to
 - **v2 (Living Kit):** advanced templates, Temporal workflows, K8s manifests, member support
 - **v3 (Smelter):** guided scaffolding tool for custom repo generation
 
+## Get the Full Version
+
+This is the public scaffold. The full working implementation includes:
+- 5 domain templates (Customer Support, Content Moderation, Market Research, Data Pipeline, Code Review)
+- Studio trace visualiser
+- Smelter wizard access
+- CLI scaffolding tools
+
+**Get started at [smelt.gimzware.ai](https://smelt.gimzware.ai)**
+
 ## Licensing
 
 This repository is distributed under SMELT’s open-core licensing model.
