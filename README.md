@@ -33,16 +33,16 @@ Senior Python and AI engineers who want a principled starting point for producti
 
 ### Available with Purchase
 
-- Five working agents (Planner, Research, Reasoning, Action, Validator)
-- Full asyncio orchestrator with intelligent routing and scatter-gather
+- Full working agents — Planner, Research, Reasoning, Action, Validator
+- Asyncio orchestrator with intelligent routing and scatter-gather
 - Rust NATS router with gRPC bridge
 - End-to-end pipeline with real LLM calls
-- Five domain templates (Customer Support, Content Moderation, Market Research, Data Pipeline, Code Review)
+- Domain templates and CLI scaffolding tools
 - Studio trace visualiser
-- Smelter wizard for custom builds
-- CLI scaffolding tools (`create-smelt` npm + `smelt-cli` PyPI)
 - Guardrails middleware and policy-as-code
 - MCP and A2A protocol support
+
+More tools and templates are added continuously.
 
 ## Reference Architecture
 
@@ -84,6 +84,6 @@ This is the public scaffold. The full working implementation includes everything
 
 ## Licensing
 
-This repository is distributed under a proprietary view-only licence. The source is provided for inspection and evaluation only. The working implementation is available through paid tiers (Starter / Member).
+This repository is distributed under a proprietary view-only licence. The source is provided for inspection and evaluation only. The working implementation is available through paid plans on the SMELT site.
 
 See `LICENCE` for exact terms.
