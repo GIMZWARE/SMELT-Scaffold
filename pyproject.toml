@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "smelt"
 version = "1.0.0"
-description = "Production multi-agent AI boilerplate — Python + Rust (public scaffold)"
+description = "SMELT public open-core scaffold: typed contracts and reference architecture for a multi-agent AI platform"
 readme = "README.md"
 license = "LicenseRef-Proprietary"
 requires-python = ">=3.12"
@@ -105,18 +105,18 @@ select = [
     "F",     # pyflakes
     "I",     # isort
     "B",     # flake8-bugbear
-    "UP",    # pyupgrade — modern Python 3.12+ idioms
-    "S",     # flake8-bandit — security
+    "UP",    # pyupgrade - modern Python 3.12+ idioms
+    "S",     # flake8-bandit - security
     "SIM",   # flake8-simplify
     "RUF",   # ruff-specific
     "C4",    # flake8-comprehensions
     "PIE",   # flake8-pie
-    "T20",   # flake8-print — ban print()
+    "T20",   # flake8-print - ban print()
     "PLE",   # pylint errors
     "PLC",   # pylint conventions
     "PLW",   # pylint warnings
     "RET",   # flake8-return
-    "ASYNC", # flake8-async — async anti-patterns
+    "ASYNC", # flake8-async - async anti-patterns
     "ARG",   # flake8-unused-arguments
     "LOG",   # flake8-logging
     "G",     # flake8-logging-format

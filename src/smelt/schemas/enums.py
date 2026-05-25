@@ -24,25 +24,31 @@ class AgentType(StrEnum):
     action = "action"
 
 
-TERMINAL_STATUSES: frozenset[TaskStatus] = frozenset({
-    TaskStatus.completed,
-    TaskStatus.failed,
-    TaskStatus.cancelled,
-})
+TERMINAL_STATUSES: frozenset[TaskStatus] = frozenset(
+    {
+        TaskStatus.completed,
+        TaskStatus.failed,
+        TaskStatus.cancelled,
+    }
+)
 
 VALID_TRANSITIONS: dict[TaskStatus, frozenset[TaskStatus]] = {
     TaskStatus.pending: frozenset({TaskStatus.dispatched, TaskStatus.cancelled}),
-    TaskStatus.dispatched: frozenset({
-        TaskStatus.in_progress,
-        TaskStatus.completed,
-        TaskStatus.failed,
-        TaskStatus.cancelled,
-    }),
-    TaskStatus.in_progress: frozenset({
-        TaskStatus.completed,
-        TaskStatus.failed,
-        TaskStatus.cancelled,
-    }),
+    TaskStatus.dispatched: frozenset(
+        {
+            TaskStatus.in_progress,
+            TaskStatus.completed,
+            TaskStatus.failed,
+            TaskStatus.cancelled,
+        }
+    ),
+    TaskStatus.in_progress: frozenset(
+        {
+            TaskStatus.completed,
+            TaskStatus.failed,
+            TaskStatus.cancelled,
+        }
+    ),
     TaskStatus.completed: frozenset(),
     TaskStatus.failed: frozenset(),
     TaskStatus.cancelled: frozenset(),
@@ -60,12 +66,6 @@ def validate_transition(current: TaskStatus, target: TaskStatus) -> None:
         ValueError: If the transition is not allowed.
     """
     if target not in VALID_TRANSITIONS[current]:
-        allowed = (
-            ", ".join(s.value for s in VALID_TRANSITIONS[current])
-            or "none (terminal state)"
-        )
-        msg = (
-            f"Invalid transition: {current.value} -> {target.value}."
-            f" Allowed: {allowed}"
-        )
+        allowed = ", ".join(s.value for s in VALID_TRANSITIONS[current]) or "none (terminal state)"
+        msg = f"Invalid transition: {current.value} -> {target.value}. Allowed: {allowed}"
         raise ValueError(msg)
