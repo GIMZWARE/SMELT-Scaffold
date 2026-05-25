@@ -1,4 +1,4 @@
-/// SMELT router — stub entry point.
+/// SMELT router - stub entry point.
 ///
 /// The full implementation (available at smelt.gimzware.ai) provides:
 ///
@@ -13,6 +13,6 @@
 /// Implement the NATS consumer, fan-out logic, and gRPC server here to replace
 /// this stub.
 fn main() {
-    println!("smelt-router scaffold — implement routing logic here.");
+    println!("smelt-router scaffold - implement routing logic here.");
     println!("Full implementation available at https://smelt.gimzware.ai");
 }

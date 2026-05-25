@@ -1,4 +1,4 @@
-"""SMELT memory layer — working memory (Redis) and episodic memory (Postgres).
+"""SMELT memory layer - working memory (Redis) and episodic memory (Postgres).
 
 This module is a stub. The full implementation (available at smelt.gimzware.ai)
 contains:

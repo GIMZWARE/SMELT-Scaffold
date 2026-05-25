@@ -1,4 +1,4 @@
-"""TaskRequest model — external-facing contract for task submission."""
+"""TaskRequest model - external-facing contract for task submission."""
 
 from __future__ import annotations
 

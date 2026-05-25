@@ -1,4 +1,4 @@
-"""TaskState model — full lifecycle record stored in episodic memory."""
+"""TaskState model - full lifecycle record stored in episodic memory."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-"""SMELT worker agents — autonomous units that process WorkItems.
+"""SMELT worker agents - autonomous units that process WorkItems.
 
 This module is a stub. The full implementation (available at smelt.gimzware.ai)
 contains three concrete agent classes and a shared base:

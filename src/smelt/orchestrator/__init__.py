@@ -1,4 +1,4 @@
-"""SMELT orchestrator — task lifecycle management over NATS JetStream.
+"""SMELT orchestrator - task lifecycle management over NATS JetStream.
 
 This module is a stub. The full implementation (available at smelt.gimzware.ai)
 contains:

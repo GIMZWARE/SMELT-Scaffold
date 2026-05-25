@@ -1,14 +1,14 @@
-"""SMELT gateway — FastAPI ingress with validation and trace stamping.
+"""SMELT gateway - FastAPI ingress with validation and trace stamping.
 
 This module is a stub. The full implementation (available at smelt.gimzware.ai)
 contains:
 
   FastAPI application (app)
-    POST /tasks — accepts TaskRequest, validates payload_json against the
+    POST /tasks - accepts TaskRequest, validates payload_json against the
     agent_type's payload schema, stamps a trace_id (UUID v4), and publishes
     a WorkItem to the orchestrator via NATS.
-    GET /tasks/{task_id} — returns current TaskState from Postgres memory.
-    GET /health — liveness and readiness probes.
+    GET /tasks/{task_id} - returns current TaskState from Postgres memory.
+    GET /health - liveness and readiness probes.
 
   Middleware
     OpenTelemetry FastAPI instrumentation for automatic span creation per request.

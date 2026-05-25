@@ -1,4 +1,4 @@
-"""WorkResult and TokenUsage models — agent execution results."""
+"""WorkResult and TokenUsage models - agent execution results."""
 
 from __future__ import annotations
 

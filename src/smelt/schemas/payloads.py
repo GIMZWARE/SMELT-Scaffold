@@ -6,7 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 class ResearchPayload(BaseModel):
-    """Payload for ResearchAgent — RAG retrieval and web search.
+    """Payload for ResearchAgent - RAG retrieval and web search.
 
     Args:
         query: The research question or topic to investigate.
@@ -22,7 +22,7 @@ class ResearchPayload(BaseModel):
 
 
 class ReasoningPayload(BaseModel):
-    """Payload for ReasoningAgent — chain-of-thought and self-consistency.
+    """Payload for ReasoningAgent - chain-of-thought and self-consistency.
 
     Args:
         prompt: The reasoning prompt or question.
@@ -38,7 +38,7 @@ class ReasoningPayload(BaseModel):
 
 
 class ActionPayload(BaseModel):
-    """Payload for ActionAgent — external tool calls and side effects.
+    """Payload for ActionAgent - external tool calls and side effects.
 
     Args:
         tool_name: Name of the tool to invoke.

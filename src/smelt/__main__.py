@@ -1,4 +1,4 @@
-"""SMELT entry point — stub for the production orchestrator startup.
+"""SMELT entry point - stub for the production orchestrator startup.
 
 The full implementation (available at smelt.gimzware.ai) starts the orchestrator
 and all worker agents in a single-process asyncio TaskGroup with:
@@ -24,8 +24,8 @@ async def run() -> None:
     """
     raise NotImplementedError(
         "smelt.__main__.run() is a stub. "
-        "Implement orchestrator and agent startup, or purchase the full "
-        "implementation at https://smelt.gimzware.ai"
+        "Implement orchestrator and agent startup, or build on the managed "
+        "SMELT Studio at https://smelt.gimzware.ai"
     )
 
 
@@ -35,8 +35,8 @@ def main() -> None:
     Stub: replace with full startup including uvloop, dotenv, and structlog.
     """
     print(  # noqa: T201
-        "SMELT scaffold — this is a stub entry point.\n"
-        "Implement run() or purchase the full version at https://smelt.gimzware.ai",
+        "SMELT scaffold - this is a stub entry point.\n"
+        "Implement run(), or build on the managed SMELT Studio at https://smelt.gimzware.ai",
         file=sys.stderr,
     )
     asyncio.run(run())

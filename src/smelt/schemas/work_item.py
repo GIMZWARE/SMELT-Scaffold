@@ -1,4 +1,4 @@
-"""WorkItem generic model — the core message dispatched to agents."""
+"""WorkItem generic model - the core message dispatched to agents."""
 
 from __future__ import annotations
 

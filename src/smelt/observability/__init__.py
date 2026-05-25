@@ -1,4 +1,4 @@
-"""SMELT observability — OpenTelemetry tracing and structured logging.
+"""SMELT observability - OpenTelemetry tracing and structured logging.
 
 This module is a stub. The full implementation (available at smelt.gimzware.ai)
 contains:
