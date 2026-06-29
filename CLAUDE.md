@@ -4,11 +4,13 @@ This file provides guidance to Claude Code when working in the smelt-scaffold re
 
 ## What This Repository Is
 
-`smelt-scaffold` is the **public open-core reference architecture** for SMELT, a multi-agent
-AI platform by GIMZWARE. It publishes the contracts and module boundaries for credibility and
-education; it is not the working implementation.
+`smelt-scaffold` is a **public starter** for SMELT, a multi-agent AI platform by GIMZWARE. It
+publishes the typed contracts and module boundaries so the community can read them, optionally
+start a local project, and contribute; it is not the working implementation and is not the
+product. It is not open-core and should not be advertised as a product.
 
-The working engine runs inside the managed product, SMELT Studio, at https://smelt.gimzware.ai.
+The product is the hosted SaaS, SMELT Studio (monthly subscription with a free tier), at
+https://smelt.gimzware.ai. The working engine runs inside it.
 
 ## Repository Structure
 

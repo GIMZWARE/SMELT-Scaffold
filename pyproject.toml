@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "smelt"
 version = "1.0.0"
-description = "SMELT public open-core scaffold: typed contracts and reference architecture for a multi-agent AI platform"
+description = "SMELT public scaffold: typed contracts and module boundaries for a multi-agent AI platform (the product is the hosted SMELT Studio SaaS)"
 readme = "README.md"
 license = "LicenseRef-Proprietary"
 requires-python = ">=3.12"
